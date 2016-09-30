@@ -1,9 +1,9 @@
 require 'xcjobs'
 
 DESTINATIONS = {
-  ios10: "platform=iOS Simulator,name=iPhone 6,OS=8.4",
+  ios10: "platform=iOS Simulator,name=iPhone 6,OS=10.0",
   ios9: "platform=iOS Simulator,name=iPhone 6,OS=9.3",
-  ios8: "platform=iOS Simulator,name=iPhone 6,OS=10.0",
+  ios8: "platform=iOS Simulator,name=iPhone 6,OS=8.4",
 }
 
 namespace :test do
