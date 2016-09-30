@@ -10,8 +10,4 @@ before_install:
 install:
   - cd Example/ios && bundle exec pod install && cd -
 script:
-  - cd Example/ios && xcodebuild -scheme 'TAKKitSwiftSample' -workspace TAKKitSwiftSample.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 6s' -sdk ${XCODE_SDK} test
-env:
-  - XCODE_SDK=iphonesimulator8.4
-  - XCODE_SDK=iphonesimulator9.3
-  - XCODE_SDK=iphonesimulator10.0
+  - cd Example/ios && bundle exec rake test:iphonesimulator
