@@ -10,4 +10,9 @@ before_install:
 install:
   - cd Example/ios && bundle exec pod install && cd -
 script:
-  - cd Example/ios && bundle exec rake test:iphonesimulator
+  - cd Example/ios && bundle exec rake test:iphonesimulator:$OS_VERSION
+env:
+  matrix:
+    - OS_VERSION=ios10
+    - OS_VERSION=ios8
+    - OS_VERSION=ios9

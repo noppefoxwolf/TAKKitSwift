@@ -1,14 +1,18 @@
-DESTINATIONS = [
-  "platform=iOS Simulator,name=iPhone 6,OS=8.4",
-  "platform=iOS Simulator,name=iPhone 6,OS=9.3",
-  "platform=iOS Simulator,name=iPhone 6,OS=10.0",
-]
+require 'xcjobs'
+
+DESTINATIONS = {
+  ios10: "platform=iOS Simulator,name=iPhone 6,OS=8.4",
+  ios9: "platform=iOS Simulator,name=iPhone 6,OS=9.3",
+  ios8: "platform=iOS Simulator,name=iPhone 6,OS=10.0",
+}
 
 namespace :test do
-  task :iphonesimulator do
-    DESTINATIONS.each do |destination|
-      command = "xcodebuild -scheme 'TAKKitSwiftSample' -workspace TAKKitSwiftSample.xcworkspace -destination '#{destination}' -sdk iphoneos test"
-      puts command
+  DESTINATIONS.each do |os, destination|
+    XCJobs::Test.new("iphonesimulator:#{os.to_s}") do |t|
+      t.workspace = 'TAKKitSwiftSample.xcworkspace'
+      t.scheme = 'TAKKitSwiftSample'
+      t.add_destination destination
+      t.build_dir = 'build'
     end
   end
 end
