@@ -3,7 +3,6 @@ osx_image: xcode8
 cache: 
   directories:
     - vendor/bundle
-    - ~/.cocoapods
 before_install:
   - gem install bundler
   - bundle install -j4 --path=vendor/bundle --binstubs=vendor/bin
