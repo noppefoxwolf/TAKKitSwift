@@ -3,14 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/TAKKitSwift.svg?style=flat)](http://cocoadocs.org/docsets/TAKKitSwift)
 [![License](https://img.shields.io/cocoapods/l/TAKKitSwift.svg?style=flat)](http://cocoadocs.org/docsets/TAKKitSwift)
 [![Platform](https://img.shields.io/cocoapods/p/TAKKitSwift.svg?style=flat)](http://cocoadocs.org/docsets/TAKKitSwift)
-
-## Build Status
-
-### master
 [![Build Status](https://travis-ci.org/taka0125/TAKKitSwift.svg?branch=master)](https://travis-ci.org/taka0125/TAKKitSwift)
-
-### develop
-[![Build Status](https://travis-ci.org/taka0125/TAKKitSwift.svg?branch=develop)](https://travis-ci.org/taka0125/TAKKitSwift)
 
 ## Installation
 
@@ -33,7 +26,7 @@ $ pod install
 
 | platform            | version |
 |---------------------|---------|
-| Xcode 8 / Swift 3.0 |  3.0.0  |
+| Xcode 8 / Swift 3.0 |  3.0.0 or higher |
 | Xcode 8 / Swift 2.3 |  2.4.0  |
 | Xcode 7             |  2.3.0  |
 
