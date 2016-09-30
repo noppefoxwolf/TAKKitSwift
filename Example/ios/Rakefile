@@ -13,7 +13,7 @@ namespace :test do
       t.scheme = 'TAKKitSwiftSample'
       t.add_destination destination
       t.build_dir = 'build'
-      t.formatter = 'xcpretty -c'
+      t.formatter = 'bundle exec xcpretty -c'
     end
   end
 end
